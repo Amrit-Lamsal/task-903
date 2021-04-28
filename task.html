@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Task 903</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  *{
+     background:black;
+  }
+
+  .slide-in .pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 42px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    border-radius: 26px;
+    -webkit-backface-visibility: hidden;
+
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.slide-in {
+    font-size: 3.3rem;
+    position: absolute;
+    bottom: 7.2rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.slide-in .pointer::after {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    content: '';
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
+    transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
+    -webkit-animation: scroll 1.5s -1s cubic-bezier(.68, -.55, .265, 1.55) infinite;
+    animation: scroll 1.5s -1s cubic-bezier(.68, -.55, .265, 1.55) infinite;
+    opacity: 1;
+    border-radius: 100%;
+    background-color: #fff;
+}
+.bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+}
+.bounceInUp {
+    animation-name: bounceInUp;
+}
+.slide-in {
+    font-size: 3.3rem;
+    position: absolute;
+    bottom: 7.2rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="slide-in wow bounceInUp" data-wow-delay="1s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: bounceInUp;">
+                 <a class="pointer wow bounceInUp" href="#about"></a>
+           </div>
+      
+
+
+</body>
+</html>
