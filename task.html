@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   *{
-     background:black;
+     background:rgb(105, 85, 85);
   }
-
+/********Scroll Frame**********/
   .slide-in .pointer {
     position: absolute;
     top: 50%;
@@ -20,7 +20,7 @@
     transform: translate(-50%, -50%);
     border: 2px solid #fff;
     border-radius: 26px;
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
 }
 a:-webkit-any-link {
@@ -28,6 +28,7 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: underline;
 }
+/********Scroll-pointer**********/
 .slide-in {
     font-size: 3.3rem;
     position: absolute;
@@ -37,6 +38,7 @@ a:-webkit-any-link {
     width: 100%;
     margin: 0;
     padding: 0;
+   
 }
 .slide-in .pointer::after {
     position: absolute;
@@ -46,32 +48,29 @@ a:-webkit-any-link {
     height: 4px;
     margin-left: -2px;
     content: '';
-    -webkit-transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
     transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
-    -webkit-animation: scroll 1.5s -1s cubic-bezier(.68, -.55, .265, 1.55) infinite;
     animation: scroll 1.5s -1s cubic-bezier(.68, -.55, .265, 1.55) infinite;
     opacity: 1;
     border-radius: 100%;
     background-color: #fff;
 }
-.bounceInUp {
-    -webkit-animation-name: bounceInUp;
-    animation-name: bounceInUp;
-}
-.bounceInUp {
-    animation-name: bounceInUp;
-}
-.slide-in {
-    font-size: 3.3rem;
-    position: absolute;
-    bottom: 7.2rem;
-    left: 0;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
 
+/********Scroll-pointer Animation**********/
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+}
 
 </style>
 </head>
